@@ -370,16 +370,6 @@ MAP                MODE
                         Maps to |:VimwikiGoBackLink|.
                         Remap command: `<Plug>VimwikiGoBackLink`
 
-                                                               *vimwiki_<Tab>*
-<Tab>              n    Find next link in the current page.
-                        Maps to |:VimwikiNextLink|.
-                        Remap command: `<Plug>VimwikiNextLink`
-
-                                                             *vimwiki_<S-Tab>*
-<S-Tab>            n    Find previous link in the current page.
-                        Maps to |:VimwikiPrevLink|.
-                        Remap command: `<Plug>VimwikiPrevLink`
-
                                                           *vimwiki_<Leader>wn*
 <Leader>wn         n    Goto or create new wiki page.
                         Maps to |:VimwikiGoto|.
@@ -3522,6 +3512,7 @@ Contributors and their Github usernames in roughly chronological order:
     - Stefan Lehmann (@stevesteve)
     - @graywolf
     - flex (@bratekarate)
+    - Brutus11111
 
 ==============================================================================
 16. Changelog                                              *vimwiki-changelog*
@@ -3536,6 +3527,7 @@ https://github.com/vimwiki-backup/vimwiki/issues.
 2.5 (2020-05-26)~
 
 New:~
+    * Issue #1227: Remove tab mapping as it's commonly used as esc replacement and/or by other plugins.
     * PR #787: |:VimwikiRenameFile| works for all directories: even
       wiki_root/diary/2019-12-11.md if current file is wiki_root/dir1/file.md.
     * Issue #764: fenced code blocks are properly supported for markdown
