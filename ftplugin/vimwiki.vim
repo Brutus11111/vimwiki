@@ -387,8 +387,6 @@ if str2nr(vimwiki#vars#get_global('key_mappings').links)
   call vimwiki#u#map_key('n', '<D-CR>', '<Plug>VimwikiTabnewLink')
   call vimwiki#u#map_key('n', '<C-S-CR>', '<Plug>VimwikiTabnewLink', 1)
   call vimwiki#u#map_key('n', '<BS>', '<Plug>VimwikiGoBackLink')
-  call vimwiki#u#map_key('n', '<TAB>', '<Plug>VimwikiNextLink')
-  call vimwiki#u#map_key('n', '<S-TAB>', '<Plug>VimwikiPrevLink')
   call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'n', '<Plug>VimwikiGoto')
   call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'d', '<Plug>VimwikiDeleteFile')
   call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'r', '<Plug>VimwikiRenameFile')
@@ -537,12 +535,6 @@ function! s:CR(normal, just_mrkr) abort
   endif
   call vimwiki#lst#kbd_cr(a:normal, a:just_mrkr)
 endfunction
-
-" insert mode table mappings
-if str2nr(vimwiki#vars#get_global('key_mappings').table_mappings)
-  inoremap <expr><buffer> <Tab> vimwiki#tbl#kbd_tab()
-  inoremap <expr><buffer> <S-Tab> vimwiki#tbl#kbd_shift_tab()
-endif
 
 " <Plug> table formatting definitions
 nnoremap <silent><buffer> <Plug>VimwikiTableAlignQ
